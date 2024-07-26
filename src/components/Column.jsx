@@ -9,7 +9,9 @@ const Column = ({ title, tasks, id, color }) => {
 				className={`w-full py-1 sticky top-0 left-0 px-3`}
 				style={{ backgroundColor: color() }}
 			>
-				<h2 className="text-black text-center text-2xl font-medium">{title}</h2>
+				<h2 className="text-black text-center text-2xl font-medium uppercase">
+					{title === "inProgress" ? "In progress" : title}
+				</h2>
 			</div>
 
 			<Droppable droppableId={id}>

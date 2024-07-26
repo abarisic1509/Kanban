@@ -117,12 +117,12 @@ const KanbanBoard = () => {
 				Progress board
 			</h1>
 
-			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center px-6 gap-3 w-full max-w-screen-2xl mx-auto">
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center px-6 gap-3 w-full max-w-screen-2xl mx-auto">
 				{Object.keys(tasks).map((key) => {
 					console.log(key);
 					return (
 						<Column
-							title={key.toUpperCase()}
+							title={key}
 							id={key}
 							key={key}
 							color={() => getColumnColor(key)}
